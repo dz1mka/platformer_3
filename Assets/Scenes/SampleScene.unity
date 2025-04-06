@@ -222,6 +222,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 316263588081039225, guid: 3aeacaa2c70cfc3498120d82c9cbc57a, type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 1831676644}
+    - target: {fileID: 316263588081039225, guid: 3aeacaa2c70cfc3498120d82c9cbc57a, type: 3}
+      propertyPath: jumpHeight
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1803543948314784461, guid: 3aeacaa2c70cfc3498120d82c9cbc57a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -271,6 +279,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3aeacaa2c70cfc3498120d82c9cbc57a, type: 3}
+--- !u!50 &1831676644 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 1665060756121660955, guid: 3aeacaa2c70cfc3498120d82c9cbc57a, type: 3}
+  m_PrefabInstance: {fileID: 1831676643}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5512381974881728081
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -281,6 +294,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4009821078116730262, guid: 0afdc908ba4856c4cbf85d287b1c4189, type: 3}
       propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009821078116730262, guid: 0afdc908ba4856c4cbf85d287b1c4189, type: 3}
+      propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 4438517437134115851, guid: 0afdc908ba4856c4cbf85d287b1c4189, type: 3}
