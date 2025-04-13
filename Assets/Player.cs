@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     public Rigidbody2D rb;
     public float jumpHeight = 10f;
     private bool isGround = true;
+    public Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +39,22 @@ public class Player : MonoBehaviour
         {
             Jump();
             isGround = false;
+            animator.SetBool("Jump", true); 
+        }
+
+        if (Mathf.Abs(movement) > 0.1f)
+        {
+            animator.SetFloat("Run", 1f);
+        }
+
+        else if (Mathf.Abs(movement) < 0.1f)
+        {
+            animator.SetFloat("Run", 0f);
+        }
+
+        if(Input.GetMouseButtonDown(0))
+        {
+            PlayAttackAnim();
         }
     }
 
@@ -51,6 +68,25 @@ public class Player : MonoBehaviour
         if (collision.collider.tag == "Ground")
         {
             isGround = true;
+            animator.SetBool("Jump", false);
+        }
+    }
+
+    void PlayAttackAnim()
+    {
+        int random = Random.Range(0, 3);
+
+        if (random == 0)
+        {
+            animator.SetTrigger("Attack1");
+        }
+        else if (random == 1)
+        {
+            animator.SetTrigger("Attack2");
+        }
+        else if (random == 2)
+        {
+            animator.SetTrigger("Attack3");
         }
     }
 }

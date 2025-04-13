@@ -172,9 +172,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1e7586ef60003441b07046a40524cb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 10
   rb: {fileID: 1665060756121660955}
   jumpHeight: 10
+  animator: {fileID: 3239500081611577320}
 --- !u!95 &3239500081611577320
 Animator:
   serializedVersion: 5
